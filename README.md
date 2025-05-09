@@ -14,6 +14,10 @@
 
 這是一個基於 Model Context Protocol (MCP) 的伺服器實作，專為 Intel Graphics Control Library (IGCL) 的概念驗證 (POC) 所設計。本專案允許透過 MCP 協議與 Intel 圖形硬體進行互動和控制。
 
+### 演示影片
+
+觀看[示範影片](demo_video_usage.mp4)以了解完整的安裝和使用流程。
+
 ### 特點
 
 - 模組化的插件架構
@@ -170,6 +174,10 @@ cp build/plugins/*.dll /c/mcp_server_igcl/plugins/
 ### Introduction
 
 This is a server implementation based on the Model Context Protocol (MCP), designed specifically for the Proof of Concept (POC) of the Intel Graphics Control Library (IGCL). This project allows interaction and control of Intel graphics hardware through the MCP protocol.
+
+### Demo Video
+
+Watch the [demonstration video](demo_video_usage.mp4) to understand the complete installation and usage process.
 
 ### Features
 
