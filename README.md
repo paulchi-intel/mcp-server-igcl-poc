@@ -108,19 +108,14 @@ cp build/server_igcl_poc.exe /c/mcp_server_igcl/
 cp build/plugins/*.dll /c/mcp_server_igcl/plugins/
 ```
 
-4. 如果需要，複製 IGCL 運行庫
-```bash
-cp /c/ControlApi/Release/Dll/*.dll /c/mcp_server_igcl/
-```
+4. 下載、安裝並登入 Claude Desktop ([下載連結](https://claude.ai/download))
 
-5. 下載、安裝並登入 Claude Desktop ([下載連結](https://claude.ai/download))
-
-6. 在 Claude Desktop 中配置 MCP 伺服器:
+5. 在 Claude Desktop 中配置 MCP 伺服器:
    - 點擊 Claude Desktop 左上角的 漢堡選單 / 檔案 / 設定... / 開發者 / 編輯配置
    - 開啟並編輯 "claude_desktop_config.json" (如下列配置所示)
    - 儲存並關閉編輯器
 
-7. 重新啟動 Claude Desktop
+6. 重新啟動 Claude Desktop
 
 ### 與 Claude 桌面版整合
 
@@ -270,19 +265,14 @@ cp build/server_igcl_poc.exe /c/mcp_server_igcl/
 cp build/plugins/*.dll /c/mcp_server_igcl/plugins/
 ```
 
-4. If needed, copy IGCL runtime libraries
-```bash
-cp /c/ControlApi/Release/Dll/*.dll /c/mcp_server_igcl/
-```
+4. Download, install, and log in to Claude Desktop ([Download Link](https://claude.ai/download))
 
-5. Download, install, and log in to Claude Desktop ([Download Link](https://claude.ai/download))
-
-6. Configure the MCP server in Claude Desktop:
+5. Configure the MCP server in Claude Desktop:
    - Click on the hamburger menu in the top-left corner of Claude Desktop / File / Settings... / Developer / Edit Config
    - Open and edit "claude_desktop_config.json" (as shown in the configuration below)
    - Save and close the editor
 
-7. Restart Claude Desktop
+6. Restart Claude Desktop
 
 ### Integration with Claude Desktop
 
