@@ -88,6 +88,40 @@ cmake .. -G "MinGW Makefiles"
 mingw32-make
 ```
 
+### 安裝步驟
+
+編譯完成後，需要將程式和相關檔案部署到系統中以便與 Claude Desktop 整合：
+
+1. 創建目標資料夾
+```bash
+mkdir -p /c/mcp_server_igcl/plugins
+mkdir -p /c/mcp_server_igcl/logs
+```
+
+2. 複製主執行檔
+```bash
+cp build/server_igcl_poc.exe /c/mcp_server_igcl/
+```
+
+3. 複製所有插件
+```bash
+cp build/plugins/*.dll /c/mcp_server_igcl/plugins/
+```
+
+4. 如果需要，複製 IGCL 運行庫
+```bash
+cp /c/ControlApi/Release/Dll/*.dll /c/mcp_server_igcl/
+```
+
+5. 下載、安裝並登入 Claude Desktop ([下載連結](https://claude.ai/download))
+
+6. 在 Claude Desktop 中配置 MCP 伺服器:
+   - 點擊 Claude Desktop 左上角的 漢堡選單 / 檔案 / 設定... / 開發者 / 編輯配置
+   - 開啟並編輯 "claude_desktop_config.json" (如下列配置所示)
+   - 儲存並關閉編輯器
+
+7. 重新啟動 Claude Desktop
+
 ### 與 Claude 桌面版整合
 
 在 Claude 桌面應用程式的配置中添加以下設定：
@@ -124,6 +158,9 @@ mingw32-make
 
 - **問題：編譯時出現錯誤。**
   - 解決方案：確保已正確安裝所有依賴項，並檢查 IGCL .lib 檔案是否正確生成。
+
+- **問題：Claude 無法連接到 MCP Server。**
+  - 解決方案：確認 server_igcl_poc.exe 和插件 .dll 檔案都已正確複製到指定目錄，且 Claude 配置文件中的路徑正確無誤。
 
 ### 授權
 
@@ -213,6 +250,40 @@ cmake .. -G "MinGW Makefiles"
 mingw32-make
 ```
 
+### Installation Steps
+
+After compilation, you need to deploy the program and related files to your system for integration with Claude Desktop:
+
+1. Create target directories
+```bash
+mkdir -p /c/mcp_server_igcl/plugins
+mkdir -p /c/mcp_server_igcl/logs
+```
+
+2. Copy the main executable
+```bash
+cp build/server_igcl_poc.exe /c/mcp_server_igcl/
+```
+
+3. Copy all plugins
+```bash
+cp build/plugins/*.dll /c/mcp_server_igcl/plugins/
+```
+
+4. If needed, copy IGCL runtime libraries
+```bash
+cp /c/ControlApi/Release/Dll/*.dll /c/mcp_server_igcl/
+```
+
+5. Download, install, and log in to Claude Desktop ([Download Link](https://claude.ai/download))
+
+6. Configure the MCP server in Claude Desktop:
+   - Click on the hamburger menu in the top-left corner of Claude Desktop / File / Settings... / Developer / Edit Config
+   - Open and edit "claude_desktop_config.json" (as shown in the configuration below)
+   - Save and close the editor
+
+7. Restart Claude Desktop
+
 ### Integration with Claude Desktop
 
 Add the following settings to the Claude desktop application's configuration:
@@ -249,6 +320,9 @@ To create new IGCL plugins, refer to the structure of existing plugins and ensur
 
 - **Issue: Errors during compilation.**
   - Solution: Ensure all dependencies are correctly installed and check if the IGCL .lib files are correctly generated.
+
+- **Issue: Claude cannot connect to the MCP Server.**
+  - Solution: Verify that server_igcl_poc.exe and all plugin .dll files have been correctly copied to the specified directory, and that the paths in the Claude configuration file are correct.
 
 ### License
 
