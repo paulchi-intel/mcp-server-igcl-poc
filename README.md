@@ -161,10 +161,6 @@ cp build/plugins/*.dll /c/mcp_server_igcl/plugins/
 - **問題：Claude 無法連接到 MCP Server。**
   - 解決方案：確認 server_igcl_poc.exe 和插件 .dll 檔案都已正確複製到指定目錄，且 Claude 配置文件中的路徑正確無誤。
 
-### 授權
-
-本專案依據 [MIT 授權](LICENSE) 發布。
-
 ### 免責聲明
 
 本專案為概念驗證，不代表最終產品。
@@ -321,10 +317,6 @@ To create new IGCL plugins, refer to the structure of existing plugins and ensur
 
 - **Issue: Claude cannot connect to the MCP Server.**
   - Solution: Verify that server_igcl_poc.exe and all plugin .dll files have been correctly copied to the specified directory, and that the paths in the Claude configuration file are correct.
-
-### License
-
-This project is released under the [MIT License](LICENSE).
 
 ### Disclaimer
 
